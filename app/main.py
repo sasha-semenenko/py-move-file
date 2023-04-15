@@ -2,9 +2,7 @@ import os
 
 
 def move_file(command: str) -> None:
-    command_flag = command[0]
-    first_file = command[1]
-    second_file = command[2]
+    command_flag, first_file, second_file = command.split()
     if command_flag == "mv" and len(command.split()) == 3:
         directory, new_file = os.path.split(second_file)
         if directory:
